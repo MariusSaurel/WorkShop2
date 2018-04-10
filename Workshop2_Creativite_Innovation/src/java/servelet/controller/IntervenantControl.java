@@ -7,6 +7,7 @@ package servelet.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import modelles.Intervenant;
 
 /**
  *
@@ -17,20 +18,25 @@ import javax.faces.bean.RequestScoped;
 public class IntervenantControl {
 
     
-    private String idIntervenant;
+    private Intervenant intervenant;
     
     /**
      * Creates a new instance of IntervenantControl
+     * @param intervenant
      */
-    public IntervenantControl(String idIntervenant) {
-        this.idIntervenant = idIntervenant;
+    public IntervenantControl(Intervenant intervenant) {
+        this.intervenant = intervenant;
     }
    
-    public int addQuestion(String question){
-        int idNewQuestion;
-        //TODO
-        return idNewQuestion;
+    public void getHistoricIntervention(){
+      //TODO      
     }
         
+    public void demanderJeton(){
+        //TODO   
+    }
     
+    public void imprimerHistoric(){
+        //TODO   
+    }
 }
