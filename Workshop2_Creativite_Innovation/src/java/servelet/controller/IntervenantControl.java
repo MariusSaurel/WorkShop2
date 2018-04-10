@@ -18,7 +18,6 @@ public class IntervenantControl {
 
     
     private String idIntervenant;
-    private String idGroup;
     
     /**
      * Creates a new instance of IntervenantControl
