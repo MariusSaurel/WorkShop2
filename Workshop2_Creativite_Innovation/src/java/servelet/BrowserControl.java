@@ -12,15 +12,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelles.Administrateur;
+import modelles.User;
 
 /**
  *
  * @author Joubert
  */
-
 @WebServlet(name = "BrowserControl", urlPatterns = {"/BrowserControl"})
 public class BrowserControl extends HttpServlet {
 
+    private User loggedUser;
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -47,6 +50,40 @@ public class BrowserControl extends HttpServlet {
         }
     }
     
+    private void connection(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        
+        String id = request.getParameter("id");
+        String password = request.getParameter("password");        
+        System.out.println("id : " +id);
+        System.out.println("password : " +password);
+        
+        this.loggedUser = new Administrateur("AAA","Jerome","lala","jerom@gamil.com");
+        
+        switch (loggedUser.getType()) {
+            case "Administrateur":
+                Administrateur loggedAdmin = (Administrateur) this.loggedUser;
+                System.out.println("IdAmind : " +loggedAdmin.getIdAmind());
+                response.sendRedirect( "resources/pages/admin.html"); 
+                
+                break;
+            case "Etudiant":
+                
+                response.sendRedirect( "resources/pages/etudiant.html"); 
+                
+                break;
+            case "Intervenant":
+                
+                response.sendRedirect( "resources/pages/intervenant.html"); 
+                
+                break;
+            default:
+                
+                
+                break;
+        }
+    }
+    
+    
 //    @Override
 //    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 ////        String delete = request.getParameter("delete");
@@ -69,9 +106,22 @@ public class BrowserControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String password = request.getParameter("password");
-        System.out.println("password : " +password);
-        response.sendRedirect( "resources/pages/admin.html"); // Refresh page with table.        
+        
+               
+        
+        
+        switch (request.getParameter("page")) {
+            case "Connection":
+                    this.connection(request, response);
+                 break;                 
+            default:
+                break;
+        
+        }
+        
+//        response.sendRedirect( "resources/pages/admin.html"); // Refresh page with table.   
+        
+        
         processRequest(request, response);
     }
 
@@ -85,7 +135,8 @@ public class BrowserControl extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException {        
+       
         
         processRequest(request, response);
     }
@@ -99,14 +150,5 @@ public class BrowserControl extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    public void SelectPage(char password)
-    {
-        System.out.println("password : " + password);
-    }
-    
-    public void PageAdmin() 
-    {
-    }
-    
 
 }
