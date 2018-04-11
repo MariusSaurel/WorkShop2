@@ -63,7 +63,7 @@ public class BrowserControl extends HttpServlet {
             case "Administrateur":
                 Administrateur loggedAdmin = (Administrateur) this.loggedUser;
                 System.out.println("IdAmind : " +loggedAdmin.getIdAmind());
-                response.sendRedirect( "resources/pages/admin.html"); 
+                response.sendRedirect( "resources/pages/Projet.html"); 
                 
                 break;
             case "Etudiant":
