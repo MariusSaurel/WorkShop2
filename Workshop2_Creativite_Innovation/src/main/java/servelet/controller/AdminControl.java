@@ -31,6 +31,7 @@ public class AdminControl {
      * Creates a new instance of AdminControl
      * @param administrateur
      */
+    
     public AdminControl(Administrateur administrateur) {
         this.administrateur = administrateur;
     }
@@ -68,17 +69,17 @@ public class AdminControl {
     
     public void createnewgroupe ()
     {
-        
+        //Bdd.CreateNewGroupe(request.getParameter("name"),request.getParameter("erte"))
     }
     
     public void createnewevenement ()
     {
-        
+        //Bdd.CreateNewEvenement(request.getParameter("name"),request.getParameter("erte"))
     }
     
     public void createnewintervenant ()
     {
-        
+        //Bdd.CreateNewIntervenant(request.getParameter("name"),request.getParameter("erte"))
     }
     
     
