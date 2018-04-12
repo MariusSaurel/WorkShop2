@@ -1,0 +1,116 @@
+<html>
+
+<head>
+
+<link rel="stylesheet"  href="C:\Users\van christian\Desktop\Workshop\fichier\home.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div id="content_div">
+
+   
+  <div id="child">
+  <img id="image_form" src="C:\Users\van christian\Desktop\Workshop\Image/logo.png" alt="Photo de montagne" />
+  <img id="image_form1" src="C:\Users\van christian\Desktop\Workshop\Image/FACEAT.png" alt="Photo de montagne" />
+  </div >
+   
+    <div  id="child3">
+   <img  class="administrateur" src="C:\Users\van christian\Desktop\Workshop\Image/Adm.png" alt="Photo de montagne" />
+  </div>
+  <div  id="child2">
+<main>
+
+        <div class="fixed-action-btn toolbar ">
+            <a class="btn-floating btn-large teal lighten-2" href="AjoutIntervenant.html"><i class="large material-icons">add</i></a>
+
+            <ul>
+                <li class="waves-effect waves-light"><a><i class="material-icons">contact_phone</i></a></li>
+                <li class="waves-effect waves-light"><a><i class="material-icons">add_location</i></a></li>
+                <li class="waves-effect waves-light"><a><i class="material-icons">keyboard_voice</i></a></li>
+                <li class="waves-effect waves-light"><a><i class="material-icons">photo_camera</i></a></li>
+            </ul>
+        </div>
+    
+
+        <div class="container">
+     <form name="form4" method="POST" action="Intervenant.html">
+        <form>
+                <h3 class="gestion"> Gestion des groupes </h3>
+				
+               <table id="tableSeconde">
+			        <tr>
+              <th class="intervenant">Nom</th>
+              <th class="intervenant">Nombre d'étudiants</th>
+             <th class="intervenant">Slogan</th>
+			 <th class="intervenant">Full description</th>
+			 <th class="intervenant">projet</th>
+			 <th class="intervenant"></th>
+             <th class="intervenant"></th>
+			 <th class="intervenant"></th>
+		
+                 </tr>
+   <tr>
+       <td>THE KILLER</td>
+       <td>3</td>
+       <td>nous sommes le meilleur</td>
+	   <td>il était une fois</td>
+	   <td>la guerre froide</td>
+	   <th><button type="submit" class="mybutton1" name="create">  Supprimer </button></th>
+	   <th><button type="submit" class="mybutton1" name="create">  modifier</button></th>
+	   <th><button type="submit" class="mybutton1" name="create">  archiver </button></th>
+   </tr>
+
+
+			   
+			   </table>
+
+      
+        </form>
+        
+         </form>
+        </div>
+        
+	</main>
+  </div>
+  
+	
+</div>
+  
+</body>
+<script>
+
+	// modal jquery
+	$(document).ready(function(){
+	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+	$('.modal').modal();
+	});
+
+
+	// collapsible jquery
+	$(document).ready(function(){
+	$('.collapsible').collapsible();
+	});
+
+	// selects
+	$(document).ready(function() {
+    $('select').material_select();
+  });
+
+  //date picker
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+
+</script>
+</html>
+

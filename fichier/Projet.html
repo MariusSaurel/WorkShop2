@@ -1,0 +1,153 @@
+<html>
+
+<head>
+
+<link rel="stylesheet"  href="C:\Users\van christian\Desktop\Workshop\fichier\home.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div id="content_div">
+
+   
+  <div id="child">
+  <img id="image_form" src="C:\Users\van christian\Desktop\Workshop\Image/logo.png" alt="Photo de montagne" />
+  <img id="image_form1" src="C:\Users\van christian\Desktop\Workshop\Image/FACEAT.png" alt="Photo de montagne" />
+  </div >
+   
+    <div  id="child3">
+   <img  class="administrateur" src="C:\Users\van christian\Desktop\Workshop\Image/Adm.png" alt="Photo de montagne" />
+  </div>
+  
+  <div  id="child2">
+  
+	<main>
+
+        <div class="fixed-action-btn toolbar ">
+            <a class="btn-floating btn-large teal lighten-2"><i class="large material-icons">add</i></a>
+
+            <ul>
+                <li class="waves-effect waves-light"><a><i class="material-icons">contact_phone</i></a></li>
+                <li class="waves-effect waves-light"><a><i class="material-icons">add_location</i></a></li>
+                <li class="waves-effect waves-light"><a><i class="material-icons">keyboard_voice</i></a></li>
+                <li class="waves-effect waves-light"><a><i class="material-icons">photo_camera</i></a></li>
+            </ul>
+        </div>
+    
+
+        <div class="container">
+     <form name="form4" method="POST" action="Projet.html">
+        <form>
+                <h3 class="gestion" > Création projet </h3>
+            <div class="input-field col s12">
+                <select name="selection">
+                    <option value="" disabled selected>Groupe :</option>
+                    <option value="1">BPCE</option>
+                    <option value="2">EDF</option>
+                    <option value="3">Orange</option>
+					<option value="3">Clito</option>
+					<option value="3">Vision</option>
+					<option value="3">Light</option>
+                </select>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="title" type="text" class="validate" name="Title">
+                <label for="title">Titre :</label>
+            </div>
+
+
+            <div class="input-field col s12">
+                <input id="contactName" type="text" class="validate" name="Contact">
+                <label for="contactName">Intitulé :</label>
+            </div>
+			
+			 <div class="input-field col s12">
+                <select name="selection">
+                    <option value="" disabled selected> Jetons </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+					<option value="3">4</option>
+					<option value="3">5</option>
+					<option value="3">6</option>
+					<option value="3">7</option>
+					<option value="3">8</option>
+					<option value="3">9</option>
+					<option value="3">10</option>
+                </select>
+            </div>
+			
+			<div class="input-field col s12">
+                <select name="selection">
+                    <option value="" disabled selected> Intervenants </option>
+                    <option value="1">Pierre</option>
+                    <option value="2">Jean</option>
+                    <option value="3">Christophe</option>
+					<option value="3">Emmanuel</option>
+					<option value="3">van</option>
+                </select>
+            </div>
+			
+			 <div class="input-field col s12">
+                <textarea id="fullDescription" class="materialize-textarea" name="Description"></textarea>
+                <label for="fullDescription">Full description :</label>
+            </div>
+			
+            </div>
+
+              <button type="submit" class="mybutton" name="create">  Créer </button>
+        </form>
+        
+         </form>
+        </div>
+        
+	</main>
+
+
+	
+  </div>
+  	
+</div>
+<footer>
+       
+</footer>
+</body>
+
+<script>
+
+	// modal jquery
+	$(document).ready(function(){
+	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+	$('.modal').modal();
+	});
+
+
+	// collapsible jquery
+	$(document).ready(function(){
+	$('.collapsible').collapsible();
+	});
+
+	// selects
+	$(document).ready(function() {
+    $('select').material_select();
+  });
+
+  //date picker
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+
+</script>
+
+</html>
+

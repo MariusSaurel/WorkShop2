@@ -1,0 +1,164 @@
+body{
+  background-image:url(../Image/image1.jpg);
+  background-repeat: no-repeat;
+}
+
+#matable{
+position:fixed;
+left:215px;
+  text-align: center;
+  border-spacing: 30px;
+  
+}
+#content_div{
+	
+    display: flex-direction;
+    flex-direction: column;
+    position:fixed;	
+    height:700px;
+	width:1500px;
+	
+
+}
+
+#child{
+	
+	background-color: #A0522D;
+	position:fixed;
+	top:0px;
+	left:0px;
+	height: 70px;
+	width: 1500px;
+}
+#child2{
+	
+	display:block;
+	background-color: #C0C0C0;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	height: 432px;
+	width: 1500px;
+	overflow: auto;
+	
+}
+#child3{
+	
+	background-color: #708090;
+	position:absolute;
+	bottom:480px;
+	left:-8px;
+	height: 163px;
+	width: 1500px;
+}
+#image_form{
+	height: auto; 
+    width: auto; 
+    max-width: 50px; 
+    max-height: 53px;
+}
+#image_form1{
+	position: fixed;
+	right:602px;
+}
+
+#FaceAt{
+	position: absolute;
+	right: 45px;
+	color: yellow;
+}
+
+.administrateur
+{
+	position:fixed;
+	left:480px;
+	top:120px;
+}
+.mybutton{
+	position:fixed;
+	left:100px;
+	background-color:#A0522D;
+	animation-name: example;
+    animation-duration: 4s;
+	animation-iteration-count: 3;
+	 animation-direction: alternate;
+	
+}
+#tableSeconde{
+	
+border:3px solid #6495ed;
+border-collapse:collapse;
+width:100%;
+position:fixed;
+left:5px;
+margin:auto;
+}
+.intervenant{
+
+background-color: #A0522D;
+
+}
+.gestion{
+	color :white;
+}
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+#child2_1 {
+	
+	height:60px;
+	width:1500px;
+	background-color:white;
+	position:absolute;
+	top:0px;
+	opacity: 0.50;
+}
+
+.waves_1{
+        display:inline;
+        list-style-type: none;
+    }
+
+.waves_1{
+	
+        display:inline;
+        padding: 25px 50px 18px 25px;
+        margin:290;
+        color:white;
+}
+
+.waves_1:hover{
+        background-color: #000080;
+        cursor:pointer;
+        text-decoration: underline;
+}
+
+
+/*nav{
+        background-color: #961414;
+        padding:15px;
+        text-align: center;
+    }
+    nav ul{
+        display:inline;
+        list-style-type: none;
+    }
+    nav li{
+        display:inline;
+        padding: 15px 20px 15px 20px;;
+        margin:0;
+        color:white;
+    }
+    nav li:hover{
+        background-color: white;
+        cursor:pointer;
+        text-decoration: underline;
+    }*/
+
+
+
+
+
+
