@@ -5,10 +5,14 @@
  */
 package servelet.controller;
 
+import java.io.IOException;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import modelles.Administrateur;
+import modelles.User;
 
 /**
  *
@@ -20,6 +24,9 @@ public class AdminControl {
 
     private Administrateur administrateur;
     
+    
+    private User loggedUser;
+    
     /**
      * Creates a new instance of AdminControl
      * @param administrateur
@@ -27,6 +34,53 @@ public class AdminControl {
     public AdminControl(Administrateur administrateur) {
         this.administrateur = administrateur;
     }
+    
+    private void connection(HttpServletRequest request, HttpServletResponse response) throws IOException{
+                
+        switch (loggedUser.getType()) {
+            case "Administrateur":
+                Administrateur loggedAdmin = (Administrateur) this.loggedUser;
+                System.out.println("IdAmind : " +loggedAdmin.getIdAmind());
+                response.sendRedirect( "resources/pages/test.html"); 
+                
+                break;
+            case "Etudiant":
+                
+                response.sendRedirect( "resources/pages/etudiant.html"); 
+                
+                break;
+            case "Intervenant":
+                
+                response.sendRedirect( "resources/pages/intervenant.html"); 
+                
+                break;
+            default:
+                
+                
+                break;
+        }
+    }
+    
+    public void updatedata ()
+    {
+        
+    }
+    
+    public void createnewgroupe ()
+    {
+        
+    }
+    
+    public void createnewevenement ()
+    {
+        
+    }
+    
+    public void createnewintervenant ()
+    {
+        
+    }
+    
     
     
 //    public int creatNewProject(int name, String desc,String object){
